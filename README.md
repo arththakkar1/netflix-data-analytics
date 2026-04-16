@@ -2,7 +2,7 @@
 
 A comprehensive data cleaning and preprocessing pipeline for Netflix's dataset, transforming raw data into analysis-ready format.
 
-## 📋 Project Overview
+## Project Overview
 
 This project processes Netflix content data to prepare it for analysis and visualization. It handles data quality issues, performs feature engineering, and standardizes the dataset for downstream analytics.
 
@@ -15,7 +15,7 @@ This project processes Netflix content data to prepare it for analysis and visua
 - **Data Expansion**: Explodes multi-value columns for granular analysis
 - **Export**: Outputs cleaned dataset in CSV format
 
-## 📊 Dataset Structure
+## Dataset Structure
 
 ### Original Columns
 
@@ -43,7 +43,7 @@ This project processes Netflix content data to prepare it for analysis and visua
 - **country**: Split by comma and exploded into separate rows for country-level analysis
 - Multiple rows created for content available in multiple countries
 
-## 🔧 Data Processing Pipeline
+## Data Processing Pipeline
 
 ### Phase 1: Initial Cleaning
 
@@ -63,7 +63,7 @@ This project processes Netflix content data to prepare it for analysis and visua
 - Fill `duration_type` with "Unknown"
 - Set default date for missing `date_added` (1900-01-01)
 
-## 📁 Files Description
+## Files Description
 
 | File                   | Description                                                  |
 | ---------------------- | ------------------------------------------------------------ |
@@ -72,7 +72,7 @@ This project processes Netflix content data to prepare it for analysis and visua
 | `netflix_filtered.csv` | Cleaned and processed dataset ready for analysis             |
 | `README.md`            | This file - project documentation                            |
 
-## 🚀 Usage
+## Usage
 
 ### Prerequisites
 
@@ -96,7 +96,7 @@ pip install pandas jupyter
 jupyter notebook app.ipynb
 ```
 
-## 📈 Data Quality Improvements
+## Data Quality Improvements
 
 ### Missing Values Handling
 
@@ -117,7 +117,7 @@ jupyter notebook app.ipynb
 - `duration_num`: Extracted from string → Float
 - `duration_type`: Extracted → String
 
-## 📊 Output Dataset Features
+## Output Dataset Features
 
 After processing, the cleaned dataset includes:
 
@@ -133,7 +133,7 @@ After processing, the cleaned dataset includes:
   - Duration analysis by content type
   - Genre analysis
 
-## 🔍 Example Analysis Queries
+## Example Analysis Queries
 
 With the cleaned data, you can answer:
 
@@ -144,7 +144,7 @@ With the cleaned data, you can answer:
 - What's the average duration of content by type?
 - What genres are most prevalent?
 
-## 📝 Code Structure
+## Code Structure
 
 The notebook is organized into 14 clear steps:
 
@@ -163,7 +163,7 @@ The notebook is organized into 14 clear steps:
 13. **Final Verification**: Confirm complete cleaning
 14. **Export**: Save cleaned CSV
 
-## 🔄 Processing Flow Diagram
+## Processing Flow Diagram
 
 ```
 Raw CSV → Load Data → Explore Data → Check Nulls → Fill Nulls (Phase 1)
@@ -173,14 +173,14 @@ Split Countries → Feature Engineering → Validate → Fill Nulls (Phase 2)
 Handle Types → Set Defaults → Final Check → Export CSV
 ```
 
-## 💡 Key Insights from Processing
+## Key Insights from Processing
 
 - **Data Quality**: The dataset had moderate missing values requiring strategic imputation
 - **Multi-valued Fields**: Country information required expansion for proper analysis
 - **Feature Creation**: Extracted year and numeric values enable time-series and numeric analysis
 - **Data Standardization**: Consistent handling ensures reliable downstream analysis
 
-## 🛠️ Customization
+## Customization
 
 To modify the processing pipeline:
 
@@ -189,7 +189,7 @@ To modify the processing pipeline:
 3. **Filter Data**: Add filters before export based on specific criteria
 4. **Add Features**: Create additional engineered columns as needed
 
-## ⚠️ Data Assumptions
+## Data Assumptions
 
 - Data quality improves with updates to the original dataset
 - "Unknown" values are treated as valid categories during analysis
@@ -197,14 +197,14 @@ To modify the processing pipeline:
 - All multi-country assignments are valid
 - Duration types are either Minutes or Seasons
 
-## 📌 Notes
+## Notes
 
 - The dataset is updated periodically as Netflix adds/removes content
 - Analysis results may vary with dataset date
 - Some historical data may be incomplete
 - Recommendations: Filter by relevant date ranges for time-series analysis
 
-## 📞 Support & Contributions
+## Support & Contributions
 
 For questions or improvements to the processing pipeline:
 
